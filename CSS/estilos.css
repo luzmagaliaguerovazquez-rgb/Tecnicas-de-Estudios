@@ -1,0 +1,189 @@
+/* ================================
+   ESTILOS GLOBALES — PÁGINA WEB PEREYRA
+   Minimalista, limpio y educativo
+   ================================ */
+
+:root {
+  --color-primario: #2563eb;
+  --color-secundario: #0ea5a4;
+  --color-fondo: #f8fafc;
+  --color-texto: #1e293b;
+  --color-blanco: #ffffff;
+  --color-gris: #94a3b8;
+  --sombra: 0 4px 15px rgba(0, 0, 0, 0.08);
+  --radio: 12px;
+  --ancho-maximo: 1100px;
+  --fuente: "Segoe UI", Roboto, sans-serif;
+}
+
+/* ====== RESETEO ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+/* ====== ENCABEZADO ====== */
+header {
+  background: linear-gradient(90deg, var(--color-primario), var(--color-secundario));
+  color: var(--color-blanco);
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--sombra);
+}
+
+header img {
+  max-width: 150px;
+  border-radius: 8px;
+}
+
+header div {
+  flex: 1;
+  text-align: right;
+}
+
+/* ====== MENÚ DE NAVEGACIÓN ====== */
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--color-blanco);
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radio);
+  transition: all 0.25s ease;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ====== CONTENIDO PRINCIPAL ====== */
+.main {
+  max-width: var(--ancho-maximo);
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+article {
+  background: var(--color-blanco);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  transition: transform 0.25s ease;
+}
+
+article:hover {
+  transform: translateY(-4px);
+}
+
+/* ====== TÍTULOS ====== */
+h1, h2, h3 {
+  color: var(--color-primario);
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+  border-bottom: 3px solid var(--color-secundario);
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--color-texto);
+  text-align: justify;
+}
+
+/* ====== ENLACES ====== */
+a {
+  color: var(--color-primario);
+}
+
+a:hover {
+  color: var(--color-secundario);
+}
+
+/* ====== PIE DE PÁGINA ====== */
+footer {
+  background-color: #e2e8f0;
+  color: #475569;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  border-top-left-radius: var(--radio);
+  border-top-right-radius: var(--radio);
+  margin-top: 2rem;
+}
+
+/* ====== BOTONES (si los usas) ====== */
+.boton {
+  display: inline-block;
+  background: var(--color-primario);
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radio);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.25s ease;
+}
+
+.boton:hover {
+  background: var(--color-secundario);
+}
+
+/* ====== RESPONSIVO ====== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header div {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+
+  article {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+}
+
+/* ====== OPCIÓN: EFECTO SUAVE EN TRANSICIONES ====== */
+html {
+  scroll-behavior: smooth;
+}
